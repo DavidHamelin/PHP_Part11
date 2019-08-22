@@ -39,8 +39,8 @@ function Division()
     <form action="index.php" method="post">
         <div class="container col-md-4 d-flex flex-column p-3">
             <div class="d-flex justify-content-around">
-                <input type="text" name="chiffre1" value="0"/>
-                <input type="text" name="chiffre2" value="0"/>
+                <input type="text" name="chiffre1" value="<?= $_POST['chiffre1']?>"/>
+                <input type="text" name="chiffre2" value="<?= $_POST['chiffre2']?>"/>
             </div>
             <div class="d-flex justify-content-between m-4">
                 <input class="btn btn-lg btn-outline-info" type="submit" name="addition" value="+"/>
@@ -73,7 +73,8 @@ function Division()
         }
         elseif(isset($_POST['zero']))
         {
-            echo "";
+            /* echo ""; */
+            header('Location: index.php?');
         }
         else
         {
